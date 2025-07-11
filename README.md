@@ -11,7 +11,6 @@ Airflow for scheduling workflows and alerting stakeholders when orders are delay
 CSV → Snowflake → dbt → Airflow (DAG + alert)
 
 ### Folder Structure
-## 📁 Folder Structure
 
 ```plaintext
 ECOMMERCE_PROJECT_TUT/
@@ -35,3 +34,26 @@ ECOMMERCE_PROJECT_TUT/
 │
 └── test_import.py                         # Temporary script for testing import paths
 ```
+### Tools Used:
+Snowflake – Cloud Data Warehouse
+
+dbt – Data modeling and transformation
+
+Airflow – Workflow orchestration
+
+Python – For scripting and alerts
+
+### Key Components:
+Simulated e-commerce order data
+
+Snowflake tables for raw and transformed data
+
+dbt models for order status transformations
+
+Airflow DAG to:
+
+Run dbt models
+
+Check for delayed orders
+
+Send email alerts
