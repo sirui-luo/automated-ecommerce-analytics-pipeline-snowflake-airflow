@@ -11,24 +11,27 @@ Airflow for scheduling workflows and alerting stakeholders when orders are delay
 CSV → Snowflake → dbt → Airflow (DAG + alert)
 
 ### Folder Structure
+## 📁 Folder Structure
+
+```plaintext
 ECOMMERCE_PROJECT_TUT/
-│
 ├── airflow_project/
 │   └── dags/
-│       ├── order_monitor_dag.py            # Airflow DAG to orchestrate the pipeline
+│       ├── order_monitor_dag.py           # Airflow DAG to orchestrate the pipeline
 │       └── utils/config/
-│           ├── check_delayed_orders.py     # Python script to check for delayed orders
-│           └── snowflake_config.yaml       # Snowflake connection credentials
+│           ├── check_delayed_orders.py    # Python script to check for delayed orders
+│           └── snowflake_config.yaml      # Snowflake connection credentials
 │
-├── dbt_ecommerce/                          # dbt project folder for transformations
+├── dbt_ecommerce/                         # dbt project folder for transformations
 │   ├── models/
 │   ├── dbt_project.yml
-│   └── profiles.yml (if local)
+│   └── profiles.yml                       # dbt profile config (local)
 │
-├── dummy_data_creation/                    # Scripts to simulate e-commerce order data
+├── dummy_data_creation/                   # Scripts to simulate e-commerce order data
 │
-├── logs/                                   # Logs from Airflow executions
+├── logs/                                  # Logs from Airflow executions
 │
-├── airflow_venv_39/                        # Python virtual environment for Airflow
+├── airflow_venv_39/                       # Python virtual environment for Airflow
 │
-├── test_import.py                          # Temporary script for testing import paths
+└── test_import.py                         # Temporary script for testing import paths
+```
